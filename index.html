@@ -3,11 +3,11 @@
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css' />
 	
 	<title>Delaunay Triangulation</title>
 	
 	<script src="assets/vendor/jquery-2.1.1.min.js"></script>
-	<script src="assets/vendor/lodash.min.js"></script>
 	<style>
 		body {
 			font-family: 'Roboto', sans-serif;
@@ -26,13 +26,95 @@
 			z-index: -1;
 			cursor: pointer;
 		}
+		h1 {
+			font-weight: 800;
+			font-size: 2.1em;
+			color: #4A9DE7;
+			text-transform:uppercase;
+			margin:0;
+			line-height: 1;
+			font-weight: 100;
+		}
+		.info {
+			position: absolute;
+			bottom: 1em;
+			right: 1em;	
+		}
+		p {
+		    margin: 0;
+		    font-weight: 400;
+		    text-transform: uppercase;
+		    color: #999;
+		    letter-spacing: 0.25em;
+		}
+		.credits {
+		    position: absolute;
+		    top: 0.5em;
+		    right: 0.5em;
+		    font-size: 0.7em;
+		    color: #777;
+		}
+		a {
+		    color: #4A9DE7;
+		}
+		a:hover {
+		    color: #007BE9;
+		    text-decoration: none;
+		}
+		@media screen and (min-width:1200px) {
+			.info {
+				font-size:1.3em;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.info {
+				font-size:0.6em;
+				width:100%;
+				text-align:center;
+				right:0;
+			}
+			.credits {
+				right:0;
+				text-align:center;
+			}
+		}
+
+		.info {
+			padding: 0 2em;
+			text-align:center;
+		}
+		.message {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			margin-top: -0.5em;
+			font-size: 1.7em;
+			text-align: center;
+			text-transform: uppercase;
+			color: rgba(74, 157, 231, 0.65);
+			padding: 0 6%;
+			pointer-events:none;
+		}
 	</style>
 </head>
 <body>
 	<div id='container'>
 		<canvas></canvas>
+		
+		<div class='info'>
+			<h1>Delaunay Triangulation</h1>
+			<p>The circles only contain 3 points</p>
+		</div>
+		<footer class='credits'>
+			<a href='http://gregtatum.com/'>Greg Tatum</a> | 
+			<a href='https://twitter.com/intent/tweet/?text=%40TatumCreative' target='_new'>@TatumCreative</a> |
+			<a href='http://github.com/TatumCreative/Recursivity'>Source</a>
+		</footer>
+		
 	</div>
-	<script src="triangle.js"></script>
+	<script src="assets/build/bundle.js"></script>
 	
 </body>
 </html>
